@@ -21,6 +21,9 @@ app.get('/', (req, res) => {
     return res.send('<h1>Welcome to mern app</h1>')
 })
 
+const bookRouter = require('./routes/index');
+app.use('/books', bookRouter);
+
 
 app.listen(port, function(err){
     if(err){
